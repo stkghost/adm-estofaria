@@ -1,8 +1,8 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import React from 'react'
 import { ServerStyleSheet } from 'styled-components'
 
-export default class MyDocument extends Document{
-
+export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
@@ -28,15 +28,16 @@ export default class MyDocument extends Document{
     }
   }
 
-
-  render () {
+  render() {
     return (
       <Html>
         <Head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com"/>
-          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap" rel="stylesheet"/>
-          <title>ADM Estofados</title>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;800&display=swap"
+            rel="stylesheet"
+          />
           <body>
             <Main />
             <NextScript />
